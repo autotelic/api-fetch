@@ -1,0 +1,56 @@
+{
+  "name": "api-fetch",
+  "version": "0.0.1",
+  "description": "A fetch client for interacting with RESTful apis",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn compile:js & yarn compile:types",
+    "compile:js": "babel ./src --out-dir lib --extensions '.ts,.tsx' --ignore **/*.test.**",
+    "compile:types": "tsc --declaration --outDir lib/ --noEmit false --allowJS false --isolatedModules false --emitDeclarationOnly --declarationMap",
+    "format": "prettier --write",
+    "format:check": "prettier --check",
+    "lint": "eslint 'src/**/*'",
+    "prebuild": "rimraf lib && yarn lint",
+    "test": "mocha './src/**/*.test.ts' --require test/setup.js --recursive",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autotelic/api-fetch.git"
+  },
+  "keywords": [
+    "fetch",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/autotelic/api-fetch/issues"
+  },
+  "homepage": "https://github.com/autotelic/api-fetch#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.5.5",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.7",
+    "@types/sinon": "^7.0.13",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0 || ^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "sinon": "^7.4.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
