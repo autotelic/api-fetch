@@ -13,4 +13,17 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
   },
+  rules: {
+    'implicit-arrow-linebreak': 0,
+    'object-curly-newline': 0,
+    'function-paren-newline': 0,
+  },
+  overrides: [
+    {
+      files: ['*.test.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 0,
+      },
+    },
+  ],
 };

@@ -31,10 +31,12 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.5.5",
     "@types/chai": "^4.2.0",
+    "@types/lodash.startswith": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "@types/sinon": "^7.0.13",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
@@ -51,6 +53,9 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "cross-fetch": "^3.0.4",
+    "lodash.startswith": "^4.2.1",
     "tslib": "^1.10.0"
   }
 }
